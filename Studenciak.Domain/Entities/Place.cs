@@ -1,9 +1,10 @@
+using Domain.Common;
 using Domain.Enums;
 using Domain.ValueObjects;
 
 namespace Domain.Entities;
 
-public class Place
+public class Place : BaseEntity<int>
 {
     public int Id { get; set; }
     public string Name { get; set; }
