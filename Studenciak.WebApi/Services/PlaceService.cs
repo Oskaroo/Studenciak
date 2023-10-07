@@ -25,7 +25,7 @@ public class PlaceService : IPlaceService
     {
         var places = _dbContext.Places
             .Include(p => p.Location)
-            .Include(p => p.FoodType)
+            //.Include(p => p.TypeOfPlace)
             .ToList();
         var placesDtos = _mapper.Map<List<PlaceDto>>(places);
         return placesDtos;
