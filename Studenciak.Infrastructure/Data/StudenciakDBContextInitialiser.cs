@@ -21,7 +21,6 @@ public class StudenciakDbContextInitialiser
             _dbContext.SaveChanges();
         }
     }
-
     private List<Place> GetPlaces()
     {
         var places = new List<Place>

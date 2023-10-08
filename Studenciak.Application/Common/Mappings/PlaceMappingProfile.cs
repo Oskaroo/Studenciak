@@ -9,6 +9,7 @@ namespace Application.Common.Mappings
         public PlaceMappingProfile()
         {
             CreateMap<Place, PlaceDto>();
+            CreateMap<CreatePlaceDto, Place>();
         }
     }
 }
