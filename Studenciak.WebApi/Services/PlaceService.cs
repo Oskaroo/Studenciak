@@ -13,6 +13,7 @@ public interface IPlaceService
     PlaceDto GetById(int id);
     int Create(CreatePlaceDto dto);
     void Delete(int id);
+    void Update(int id, UpdatePlaceDto dto);
 }
 
 public class PlaceService : IPlaceService
@@ -61,6 +62,18 @@ public class PlaceService : IPlaceService
         if (place is null)
             throw new NotFoundException("Restaurant not found");
         _dbContext.Places.Remove(place);
+        _dbContext.SaveChanges();
+    }
+    public void Update(int id, UpdatePlaceDto dto)
+    {
+        var place = _dbContext.Places
+            .FirstOrDefault(p => p.Id == id);
+        if (place is null) 
+            throw new NotFoundException("Restaurant not found");
+        place.Name = dto.Name;
+        place.Description = dto.Description;
+        place.Location = dto.Location;
+        place.TypeOfPlace = dto.TypeOfPlace;
         _dbContext.SaveChanges();
     }
 }

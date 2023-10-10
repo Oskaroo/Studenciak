@@ -5,6 +5,7 @@ using Web.Services;
 
 namespace Web.Controllers;
 [Route("api/place")]
+[ApiController]
 public class PlaceController : ControllerBase
 {
     private readonly IPlaceService _placeService;
@@ -41,5 +42,11 @@ public class PlaceController : ControllerBase
         _placeService.Delete(id);
             
         return NoContent();
+    }
+    [HttpPut("{id}")]
+    public ActionResult<PlaceDto> Update([FromBody] UpdatePlaceDto dto, [FromRoute] int id)
+    {
+        _placeService.Update(id, dto);
+        return Ok();
     }
 }
