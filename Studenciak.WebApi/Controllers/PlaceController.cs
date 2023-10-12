@@ -6,6 +6,7 @@ using Web.Services;
 namespace Web.Controllers;
 [Route("api/place")]
 [ApiController]
+[Authorize]
 public class PlaceController : ControllerBase
 {
     private readonly IPlaceService _placeService;

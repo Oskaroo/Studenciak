@@ -10,6 +10,7 @@ namespace Application.Common.Mappings
         {
             CreateMap<Place, PlaceDto>();
             CreateMap<CreatePlaceDto, Place>();
+            CreateMap<UpdatePlaceDto, Place>();
         }
     }
 }

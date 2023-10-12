@@ -17,6 +17,7 @@ public class StudenciakDbContext : DbContext, IStudenciakDbContext
     
     #region DbSet
     public DbSet<Place> Places { get; set; }
+    public DbSet<User> Users { get; set; }
     #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -30,6 +31,12 @@ public class StudenciakDbContext : DbContext, IStudenciakDbContext
         modelBuilder.Entity<Place>()
             .Property(p => p.TypeOfPlace)
             .HasConversion<string>();
+        modelBuilder.Entity<User>()
+            .Property(u => u.Email)
+            .IsRequired();
+        modelBuilder.Entity<User>()
+            .Property(u => u.Email)
+            .IsRequired();
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,4 +1,6 @@
 using Application.Common.Mappings;
+using Application.Common.Models;
+using Application.Validators;
 using AutoMapper;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +22,8 @@ public static class DependencyInjection
 
         var mapper = mapperConfig.CreateMapper();
         services.AddSingleton(mapper);
+        
+        
         
         return services;
     }
