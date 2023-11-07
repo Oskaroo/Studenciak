@@ -1,18 +1,21 @@
-using System.ComponentModel.DataAnnotations;
-using Domain.Common;
-using Domain.Enums;
 using Domain.ValueObjects;
 
 namespace Domain.Entities;
 
-public class Place : BaseEntity<int>
+public class Place
 {
+    public int Id { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
-    public Location Location { get; set; }
-    public PlaceType TypeOfPlace { get; set; }
-    public string FoodType { get; set; } // For restaurants, specify the type of food (e.g., Chinese, Fast Food)
     public double Rating { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
+    
+    
+    public int TypeOfPlaceId { get; set; }
+    public PlaceType TypeOfPlace { get; set; }
+    
+    
+    public int PlaceLocationId { get; set; }
+    public Location PlaceLocation { get; set; }
 }

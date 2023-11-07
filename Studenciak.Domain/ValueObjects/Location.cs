@@ -2,7 +2,12 @@ namespace Domain.ValueObjects;
 
 public class Location
 {
-    public int Id { get; set; }
-    public double Latitude { get; set; }
-    public double Longitude { get; set; }
+    public double Latitude { get; }
+    public double Longitude { get; }
+
+    public Location(double latitude, double longitude)
+    {
+        Latitude = latitude;
+        Longitude = longitude;
+    }
 }
