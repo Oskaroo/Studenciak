@@ -1,13 +1,13 @@
+using Domain.Entities;
+
 namespace Domain.ValueObjects;
 
 public class Location
 {
-    public double Latitude { get; }
-    public double Longitude { get; }
+    public int Id { get; set; }
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
 
-    public Location(double latitude, double longitude)
-    {
-        Latitude = latitude;
-        Longitude = longitude;
-    }
+    public int PlaceId { get; set; }
+    public Place Place { get; set; }
 }

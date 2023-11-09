@@ -1,7 +1,8 @@
 using System.Reflection;
+using Application.User.Commands.Register;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Application;
+namespace Application.Configuration;
 
 public static class ServiceCollection
 {

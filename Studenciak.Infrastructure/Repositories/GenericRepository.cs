@@ -15,28 +15,35 @@ internal class GenericRepository<TEntity, TKey> : IGenericRepository<TEntity, TK
         _dbContext = dbContext;
         _entities = _dbContext.Set<TEntity>();
     }
-    public Task<TEntity?> GetByIdAsync(TKey id)
+    public async Task<TEntity?> GetByIdAsync(TKey id) => await _dbContext.Set<TEntity>().FindAsync(id);
+
+    public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, object>>? include = null)
     {
-        throw new NotImplementedException();
+        IQueryable<TEntity> query = _dbContext.Set<TEntity>();
+        if (include != null)
+        {
+            query = query.Include(include);
+        }
+        return await query.ToListAsync();
     }
 
-    public Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, object>>? include = null)
+    public async Task<int> AddAsync(TEntity entity)
     {
-        throw new NotImplementedException();
+        await _dbContext.Set<TEntity>().AddAsync(entity);
+        await _dbContext.SaveChangesAsync();
+        var property = _dbContext.Entry(entity).Property("Id");
+        return (int)(property.CurrentValue ?? throw new InvalidOperationException());
     }
 
-    public Task<int> AddAsync(TEntity entity)
+    public async Task UpdateAsync(TEntity entity)
     {
-        throw new NotImplementedException();
+        _dbContext.Set<TEntity>().Update(entity);
+        await _dbContext.SaveChangesAsync();
     }
 
-    public Task UpdateAsync(TEntity entity)
+    public async Task DeleteAsync(TEntity entity)
     {
-        throw new NotImplementedException();
-    }
-
-    public Task DeleteAsync(TEntity entity)
-    {
-        throw new NotImplementedException();
+        _dbContext.Set<TEntity>().Remove(entity);
+        await _dbContext.SaveChangesAsync();
     }
 }
