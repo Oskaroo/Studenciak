@@ -14,5 +14,12 @@ public class UsersConfiguration : IEntityTypeConfiguration<User>
         builder.Property(u => u.Email).IsRequired();
         builder.Property(u => u.PasswordHash).IsRequired();
         builder.Property(u => u.DateOfBirth).IsRequired(false);
+        builder.HasMany(u => u.FavoritePlaces)
+            .WithMany(p => p.FavoritedByUsers)
+            .UsingEntity(j => j.ToTable("UserFavoritePlaces"));
+
+        builder.HasMany(u => u.VisitedPlaces)
+            .WithMany(p => p.VisitedByUsers)
+            .UsingEntity(j => j.ToTable("UserVisitedPlaces"));
     }
 }

@@ -1,0 +1,18 @@
+[
+  {
+    "Email": "admin@test.com",
+    "FirstName": "Admin",
+    "LastName": "User",
+    "DateOfBirth": "1990-01-01",
+    "PasswordHash": "admin123",
+    "UserRoleId": 1
+  },
+  {
+    "Email": "user@test.com",
+    "FirstName": "Regular",
+    "LastName": "User",
+    "DateOfBirth": "1995-05-05",
+    "PasswordHash": "user123",
+    "UserRoleId": 2
+  }
+]

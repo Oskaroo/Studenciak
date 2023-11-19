@@ -1,0 +1,38 @@
+[
+  {
+    "Latitude": 50.05142262515753,
+    "Longitude": 19.94540737179364,
+    "Name": "Kraków Plac Nowy",
+    "PlaceId": 1
+  },
+  {
+    "Latitude": 50.06468524430072,
+    "Longitude": 19.92773641022631,
+    "Name": "Kraków NPizza",
+    "PlaceId": 2
+  },
+  {
+    "Latitude": 50.062013900482626,
+    "Longitude": 19.93798124621236,
+    "Name": "Kraków Rynek Podziemny",
+    "PlaceId": 3
+  },
+  {
+    "Latitude": 50.06098081055319,
+    "Longitude": 19.924001295930573,
+    "Name": "Kraków Muzeum Narodowe",
+    "PlaceId": 4
+  },
+  {
+    "Latitude": 50.06230179625037,
+    "Longitude": 19.96837836318277,
+    "Name": "Kraków Fitness Platinium",
+    "PlaceId": 5
+  },
+  {
+    "Latitude": 50.089739587558626,
+    "Longitude": 19.9827632263508,
+    "Name": "Kraków Park Wodny",
+    "PlaceId": 6
+  }
+]

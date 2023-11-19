@@ -26,7 +26,6 @@
       <Folder Include="Place\Dto\" />
       <Folder Include="Place\Mapping\" />
       <Folder Include="Place\Queries\" />
-      <Folder Include="User\Mapping\" />
       <Folder Include="User\Queries\" />
     </ItemGroup>
 
