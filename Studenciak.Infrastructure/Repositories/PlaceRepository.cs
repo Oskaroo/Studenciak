@@ -25,6 +25,14 @@ public class PlaceRepository : IPlaceRepository
         return places;
     }
 
+    public async Task<IEnumerable<Place>> GetAllPlacesByPlaceTypeAsync(int placeTypeId)
+    {
+        var places = await _context.Places
+            .Where(p => p.TypeOfPlaceId == placeTypeId)
+            .ToListAsync();
+        return places;
+    }
+
     public Task AddAsync(Place place)
     {
         throw new NotImplementedException();
