@@ -19,5 +19,6 @@ public class UserMappings : IRegister
             .Map(dest => dest.Email, src => src.Email)
             .Map(dest => dest.DateOfBirth, src => src.DateOfBirth)
             .Map(dest => dest.Password, src => src.PasswordHash);
+        
     }
 }

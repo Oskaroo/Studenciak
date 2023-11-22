@@ -17,6 +17,7 @@ public static class ServiceCollection
     {
         services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IPlaceRepository, PlaceRepository>();
         services.AddScoped<IPasswordManager, PasswordManager>();
         services.AddSingleton<IPasswordHasher<User>, PasswordHasher<User>>();
         services.AddScoped<IDatabaseSeeder, DatabaseSeeder>();

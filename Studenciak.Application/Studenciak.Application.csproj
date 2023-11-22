@@ -23,9 +23,6 @@
     <ItemGroup>
       <Folder Include="Common\" />
       <Folder Include="Place\Commands\" />
-      <Folder Include="Place\Dto\" />
-      <Folder Include="Place\Mapping\" />
-      <Folder Include="Place\Queries\" />
       <Folder Include="User\Queries\" />
     </ItemGroup>
 
