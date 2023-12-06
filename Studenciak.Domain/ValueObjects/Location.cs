@@ -8,8 +8,7 @@ public class Location
     public double Latitude { get; set; }
     public double Longitude { get; set; }
     
-    public string Name { get; set; }
-
-    public int PlaceId { get; set; }
-    public Place Place { get; set; }
+    public string? Name { get; set; }
+    
+    public virtual Place? Place { get; set; }
 }

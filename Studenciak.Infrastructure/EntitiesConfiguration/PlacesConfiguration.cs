@@ -15,6 +15,8 @@ public class PlacesConfiguration : IEntityTypeConfiguration<Place>
         builder.Property(p => p.Rating).IsRequired();
         builder.Property(p => p.CreatedAt).IsRequired();
         builder.Property(p => p.UpdatedAt).IsRequired();
-        
+        builder.HasOne(p => p.TypeOfPlace)
+            .WithMany(t => t.Places)
+            .HasForeignKey(p => p.TypeOfPlaceId);
     }
 }

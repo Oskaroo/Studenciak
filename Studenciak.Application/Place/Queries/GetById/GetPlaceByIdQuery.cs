@@ -3,4 +3,4 @@ using Application.Place.Dto;
 
 namespace Application.Place.Queries.GetById;
 
-public record GetPlaceByIdQuery(int placeId) : IQuery<PlaceDto>;
+public sealed record GetPlaceByIdQuery(int placeId) : IQuery<PlaceDto>;

@@ -13,12 +13,12 @@ public class Place
     
     
     public int TypeOfPlaceId { get; set; }
-    public PlaceType TypeOfPlace { get; set; }
+    public PlaceType? TypeOfPlace { get; set; }
     
-    public virtual ICollection<User> FavoritedByUsers { get; set; }
-    public virtual ICollection<User> VisitedByUsers { get; set; }
-    public virtual ICollection<Review> Reviews { get; set; }
+    public virtual ICollection<User>? FavoritedByUsers { get; set; }
+    public virtual ICollection<User>? VisitedByUsers { get; set; }
+    public virtual ICollection<Review>? Reviews { get; set; }
     
     public int PlaceLocationId { get; set; }
-    public Location PlaceLocation { get; set; }
+    public Location? PlaceLocation { get; set; }
 }

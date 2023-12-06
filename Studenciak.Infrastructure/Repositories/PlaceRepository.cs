@@ -8,7 +8,6 @@ namespace Infrastructure.Repositories;
 public class PlaceRepository : IPlaceRepository
 {
     private readonly StudenciakDbContext _context;
-
     public PlaceRepository(StudenciakDbContext context)
     {
         _context = context;
@@ -33,9 +32,11 @@ public class PlaceRepository : IPlaceRepository
         return places;
     }
 
-    public Task AddAsync(Place place)
+    public async Task<int> AddAsync(Place place)
     {
-        throw new NotImplementedException();
+        await _context.Places.AddAsync(place);
+        await _context.SaveChangesAsync();
+        return place.Id;
     }
 
     public Task UpdateAsync(Place place)
@@ -43,8 +44,9 @@ public class PlaceRepository : IPlaceRepository
         throw new NotImplementedException();
     }
 
-    public Task DeleteByIdAsync(int id)
+    public async Task DeleteByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        var place = await _context.Places.FirstOrDefaultAsync(p => p.Id == id);
+        _context.Places.Remove(place);
     }
 }
