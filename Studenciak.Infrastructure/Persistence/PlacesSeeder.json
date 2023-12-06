@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "Plac Nowy 1",
+    "Description": "Przestronny, wyłożony cegłą lokal serwujący nowoczesne europejskie potrawy, koktajle i piwa rzemieślnicze.",
+    "TypeOfPlaceId": 1,
+    "PlaceLocationId": 1
+  },
+  {
+    "Name": "N'Pizza",
+    "Description": "Modna restauracja włoska serwująca prosecco i pizzę neapolitańską.",
+    "TypeOfPlaceId": 1,
+    "PlaceLocationId": 2
+  },
+  {
+    "Name": "Rynek Podziemny",
+    "Description": "Podziemia Rynku Głównego w Krakowie – oddział Muzeum Historycznego Miasta Krakowa znajdujący się pod wschodnią częścią płyty Rynku Głównego.",
+    "TypeOfPlaceId": 2,
+    "PlaceLocationId": 3
+  },
+  {
+    "Name": "Muzeum Narodowe w Krakowie",
+    "Description": "Muzeum posiada bogaty zbiór dzieł sztuki polskiej, europejskiej i pozaeuropejskiej, co stawia je na pozycji jednej z najważniejszych i najciekawszych kolekcji nie tylko w Polsce, ale na świecie.",
+    "TypeOfPlaceId": 2,
+    "PlaceLocationId": 4
+  },
+  {
+    "Name": "Fitness Platinium Aleja Pokoju 16",
+    "Description": "Fitness Platinium® XXL przy Alei Pokoju 16 to jeden z największych klubów naszej sieci!",
+    "TypeOfPlaceId": 3,
+    "PlaceLocationId": 5
+  },
+  {
+    "Name": "Park Wodny w Krakowie",
+    "Description": "Park Wodny Kraków zaprasza na doskonałą zabawę i wypoczynek pośród mnóstwa wodnych atrakcji. Jesteśmy jednym z największych aquaparków w Polsce i Europie!",
+    "TypeOfPlaceId": 3,
+    "PlaceLocationId": 6
+  }
+]
